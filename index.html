@@ -89,7 +89,7 @@
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
-        $directory = './users/' . $username;
+        $directory = 'users/' . $username;
 
         if (!file_exists($directory)) {
             mkdir($directory, 0777, true);
